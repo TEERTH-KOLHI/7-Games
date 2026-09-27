@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamely - Home</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Gamely - Next-Gen Web Arcade</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets & Libraries -->
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+    <!-- 🌌 Navigation Header -->
     <header class="header">
         <h1 class="logo"><a href="index.html" class="neon-text">GAMELY</a></h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
+                <li><a href="index.html" class="active"><i data-lucide="home"></i> Home</a></li>
                 <li><a href="about.html"><i data-lucide="info"></i> About</a></li>
                 <li class="nav-jeux"><a href="jeux.html"><i data-lucide="gamepad-2"></i> Games</a></li>
             </ul>
@@ -28,60 +36,296 @@
     </header>    
 
     <main class="content">
-        <section class="hero" data-aos="fade-up">
-            <img src="images/gamely.png" alt="Gamely Logo" class="hero-logo" data-aos="fade-up">
-            <h1 class="hero-title">
-                <a href="#top_jeux" style="color: inherit; text-decoration: none;">
-                    Play Incredible Web Games!
+        <!-- 🚀 Futuristic Hero Section -->
+        <section class="hero-v2" data-aos="fade-up">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>Next-Gen Web Arcade</span>
+            </div>
+            <h1 class="hero-v2-title">LEVEL UP YOUR PLAY</h1>
+            <p class="hero-v2-subtitle">7 curated browser games. Zero downloads, zero lag. Pick a challenge and jump right in.</p>
+            
+            <div class="hero-cta-group">
+                <a href="#games-roster" class="cta-primary-btn">
+                    <i data-lucide="gamepad-2"></i> Explore Games
                 </a>
-            </h1>
-            <button class="play-button" onclick="window.location.href='jeux.html'">Play Now</button>
+                <button class="cta-secondary-btn" onclick="playRandomGame()">
+                    <i data-lucide="dices"></i> Random Pick
+                </button>
+            </div>
+
+            <div class="hero-stats-row">
+                <div class="stat-pill"><i data-lucide="sparkles"></i> <strong>7</strong> Instant Games</div>
+                <div class="stat-pill"><i data-lucide="zap"></i> <strong>0s</strong> Load Time</div>
+                <div class="stat-pill"><i data-lucide="trophy"></i> <strong>100%</strong> Free</div>
+            </div>
         </section>
         
-        <!-- 🎮 Carousel Jeux + liens ancres en js (vers page jeux.html) -->
+        <!-- 🎡 Dynamic Carousel Showcase -->
         <div class="carousel-container" data-aos="fade-up"> 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" onclick="redirectToJeux(0)">
+                    <div class="swiper-slide" onclick="openPopup(0)" style="cursor: pointer;">
+                        <span class="slide-category-badge">Mind</span>
                         <img src="images/legilimens.png" alt="Telepath">
                         <h3>Telepath</h3>
                     </div>
-                    <div class="swiper-slide" onclick="redirectToJeux(1)">
+                    <div class="swiper-slide" onclick="openPopup(1)" style="cursor: pointer;">
+                        <span class="slide-category-badge">Memory</span>
                         <img src="images/memorycard.png" alt="DoubleTake">
                         <h3>DoubleTake</h3>
                     </div>
-                    <div class="swiper-slide" onclick="redirectToJeux(2)">
+                    <div class="swiper-slide" onclick="openPopup(2)" style="cursor: pointer;">
+                        <span class="slide-category-badge">Maze</span>
                         <img src="images/labyquest.png" alt="LabyrinthX">
                         <h3>LabyrinthX</h3>
                     </div>
-                    <div class="swiper-slide" onclick="redirectToJeux(3)">
+                    <div class="swiper-slide" onclick="openPopup(3)" style="cursor: pointer;">
+                        <span class="slide-category-badge">Strategy</span>
                         <img src="images/aichess.png" alt="DeepKnight">
                         <h3>DeepKnight</h3>
                     </div>
-                    <div class="swiper-slide" onclick="redirectToJeux(4)">
+                    <div class="swiper-slide" onclick="openPopup(4)" style="cursor: pointer;">
+                        <span class="slide-category-badge">Arcade</span>
                         <img src="images/pacman.png" alt="OrbitMan">
                         <h3>OrbitMan</h3>
                     </div>
-                    <div class="swiper-slide" onclick="redirectToJeux(5)">
+                    <div class="swiper-slide" onclick="openPopup(5)" style="cursor: pointer;">
+                        <span class="slide-category-badge">Racing</span>
                         <img src="images/speedyverse.png" alt="HyperDrive 3D">
                         <h3>HyperDrive 3D</h3>
                     </div>
-                    <div class="swiper-slide" onclick="redirectToJeux(6)">
+                    <div class="swiper-slide" onclick="openPopup(6)" style="cursor: pointer;">
+                        <span class="slide-category-badge">Trivia</span>
                         <img src="images/quiz.png" alt="OmniQuiz">
                         <h3>OmniQuiz</h3>
                     </div>  
                 </div>
             </div>
         </div>
-        <!-- Popups des jeux -->
+
+        <!-- 🕹️ Games Roster Grid (Replaces old table) -->
+        <section id="games-roster" class="roster-section" data-aos="fade-up">
+            <div class="section-head">
+                <div class="section-badge">
+                    <i data-lucide="layout-grid"></i>
+                    <span>Arcade Roster</span>
+                </div>
+                <h2>Featured Games</h2>
+                <p>Fast-loading browser games built for quick fun and high replayability.</p>
+            </div>
+
+            <div class="games-roster-grid">
+                <!-- Card 0: Telepath -->
+                <article class="roster-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="roster-card-top">
+                        <img src="images/legilimens.png" alt="Telepath" class="roster-thumb">
+                        <div class="roster-info">
+                            <h3>Telepath</h3>
+                            <span class="roster-genre">Mind / Logic</span>
+                        </div>
+                    </div>
+                    <p class="roster-desc">Mathematical mentalism trick that decodes the card you picked.</p>
+                    <div class="roster-actions">
+                        <button class="roster-play-btn" onclick="openGame(0)">
+                            <i data-lucide="play"></i> Play
+                        </button>
+                        <button class="roster-info-btn" onclick="openPopup(0)">
+                            <i data-lucide="info"></i> Controls
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 1: DoubleTake -->
+                <article class="roster-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="roster-card-top">
+                        <img src="images/memorycard.png" alt="DoubleTake" class="roster-thumb">
+                        <div class="roster-info">
+                            <h3>DoubleTake</h3>
+                            <span class="roster-genre">Memory</span>
+                        </div>
+                    </div>
+                    <p class="roster-desc">Race the clock to flip and pair matching cyber tiles.</p>
+                    <div class="roster-actions">
+                        <button class="roster-play-btn" onclick="openGame(1)">
+                            <i data-lucide="play"></i> Play
+                        </button>
+                        <button class="roster-info-btn" onclick="openPopup(1)">
+                            <i data-lucide="info"></i> Controls
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 2: LabyrinthX -->
+                <article class="roster-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="roster-card-top">
+                        <img src="images/labyquest.png" alt="LabyrinthX" class="roster-thumb">
+                        <div class="roster-info">
+                            <h3>LabyrinthX</h3>
+                            <span class="roster-genre">Adventure</span>
+                        </div>
+                    </div>
+                    <p class="roster-desc">Navigate procedurally generated mazes to find the exit in time.</p>
+                    <div class="roster-actions">
+                        <button class="roster-play-btn" onclick="openGame(2)">
+                            <i data-lucide="play"></i> Play
+                        </button>
+                        <button class="roster-info-btn" onclick="openPopup(2)">
+                            <i data-lucide="info"></i> Controls
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 3: DeepKnight -->
+                <article class="roster-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="roster-card-top">
+                        <img src="images/aichess.png" alt="DeepKnight" class="roster-thumb">
+                        <div class="roster-info">
+                            <h3>DeepKnight</h3>
+                            <span class="roster-genre">Strategy</span>
+                        </div>
+                    </div>
+                    <p class="roster-desc">Outsmart intelligent chess bots in dynamic tactical combat.</p>
+                    <div class="roster-actions">
+                        <button class="roster-play-btn" onclick="openGame(3)">
+                            <i data-lucide="play"></i> Play
+                        </button>
+                        <button class="roster-info-btn" onclick="openPopup(3)">
+                            <i data-lucide="info"></i> Controls
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 4: OrbitMan -->
+                <article class="roster-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="roster-card-top">
+                        <img src="images/pacman.png" alt="OrbitMan" class="roster-thumb">
+                        <div class="roster-info">
+                            <h3>OrbitMan</h3>
+                            <span class="roster-genre">Arcade</span>
+                        </div>
+                    </div>
+                    <p class="roster-desc">Chomp power orbs and outrun glowing ghost patrol units.</p>
+                    <div class="roster-actions">
+                        <button class="roster-play-btn" onclick="openGame(4)">
+                            <i data-lucide="play"></i> Play
+                        </button>
+                        <button class="roster-info-btn" onclick="openPopup(4)">
+                            <i data-lucide="info"></i> Controls
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 5: HyperDrive 3D -->
+                <article class="roster-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="roster-card-top">
+                        <img src="images/speedyverse.png" alt="HyperDrive 3D" class="roster-thumb">
+                        <div class="roster-info">
+                            <h3>HyperDrive 3D</h3>
+                            <span class="roster-genre">Racing</span>
+                        </div>
+                    </div>
+                    <p class="roster-desc">High-speed pseudo-3D highway racer with traffic evasion.</p>
+                    <div class="roster-actions">
+                        <button class="roster-play-btn" onclick="openGame(5)">
+                            <i data-lucide="play"></i> Play
+                        </button>
+                        <button class="roster-info-btn" onclick="openPopup(5)">
+                            <i data-lucide="info"></i> Controls
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 6: OmniQuiz -->
+                <article class="roster-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="roster-card-top">
+                        <img src="images/quiz.png" alt="OmniQuiz" class="roster-thumb">
+                        <div class="roster-info">
+                            <h3>OmniQuiz</h3>
+                            <span class="roster-genre">Trivia</span>
+                        </div>
+                    </div>
+                    <p class="roster-desc">Rapid-fire questions to test your web and tech knowledge.</p>
+                    <div class="roster-actions">
+                        <button class="roster-play-btn" onclick="openGame(6)">
+                            <i data-lucide="play"></i> Play
+                        </button>
+                        <button class="roster-info-btn" onclick="openPopup(6)">
+                            <i data-lucide="info"></i> Controls
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>        
+        
+        <!-- 🏆 Community Favorites Podium (Replaces old <ol>) -->
+        <section class="podium-section" data-aos="fade-up">
+            <div class="section-head">
+                <div class="section-badge">
+                    <i data-lucide="award"></i>
+                    <span>Player Rankings</span>
+                </div>
+                <h2>Community Favorites</h2>
+                <p>Top-rated games based on community plays and feedback.</p>
+            </div>
+
+            <div class="podium-grid">
+                <!-- Gold #1: Telepath -->
+                <div class="podium-card podium-gold" onclick="openGame(0)">
+                    <div class="podium-badge">🥇</div>
+                    <span class="roster-genre">#1 Most Played</span>
+                    <h3>Telepath</h3>
+                    <p>Mind-reading mentalism magic.</p>
+                    <button class="roster-play-btn" style="width: 100%;">
+                        <i data-lucide="play"></i> Play Now
+                    </button>
+                </div>
+
+                <!-- Silver #2: OrbitMan -->
+                <div class="podium-card podium-silver" onclick="openGame(4)">
+                    <div class="podium-badge">🥈</div>
+                    <span class="roster-genre">#2 Runner-Up</span>
+                    <h3>OrbitMan</h3>
+                    <p>Pure retro arcade adrenaline.</p>
+                    <button class="roster-play-btn" style="width: 100%;">
+                        <i data-lucide="play"></i> Play Now
+                    </button>
+                </div>
+
+                <!-- Bronze #3: HyperDrive 3D -->
+                <div class="podium-card podium-bronze" onclick="openGame(5)">
+                    <div class="podium-badge">🥉</div>
+                    <span class="roster-genre">#3 Crowd Pick</span>
+                    <h3>HyperDrive 3D</h3>
+                    <p>High-velocity neon highway rush.</p>
+                    <button class="roster-play-btn" style="width: 100%;">
+                        <i data-lucide="play"></i> Play Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Honorable Mentions Chips -->
+            <div class="honorable-mentions-bar">
+                <span class="honorable-label">More Fan Favorites:</span>
+                <div class="honorable-chips">
+                    <button class="honorable-chip" onclick="openGame(1)"><i data-lucide="play" style="width: 12px; height: 12px;"></i> DoubleTake</button>
+                    <button class="honorable-chip" onclick="openGame(3)"><i data-lucide="play" style="width: 12px; height: 12px;"></i> DeepKnight</button>
+                    <button class="honorable-chip" onclick="openGame(2)"><i data-lucide="play" style="width: 12px; height: 12px;"></i> LabyrinthX</button>
+                    <button class="honorable-chip" onclick="openGame(6)"><i data-lucide="play" style="width: 12px; height: 12px;"></i> OmniQuiz</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 🔍 Game Preview / Controls Modal -->
         <div id="popup-container" class="popup-container">
             <div class="popup-content">
                 <span class="close-btn" onclick="closePopup()">&times;</span>
                 <img id="popup-image" src="" alt="Game Image">
                 <h3 id="popup-title"></h3>
+                <p id="popup-creator" class="popup-creator"></p>
                 <p id="popup-description"></p>
         
-                <!-- Tableau des commandes -->
+                <!-- Controls Table -->
                 <table id="popup-commands" class="popup-commands">
                     <thead>
                         <tr>
@@ -96,115 +340,77 @@
         
                 <button id="play-game-btn" class="play-game-btn">Launch Game</button>
             </div>
-        </div>        
+        </div>
 
-        <!-- Game Information Table -->
-        <section id="top_jeux" class="table-section title-line" data-aos="fade-up">
-            <h2>📊 Game Information & Features</h2>
-            <table class="game-table">
-                <thead>
-                    <tr>
-                        <th>🎮 Game Title</th>
-                        <th>📝 Description</th>
-                        <th>📌 Category</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Telepath</td>
-                        <td>A mind-bending card trick that reads your thoughts through math!</td>
-                        <td>Mindblowing</td>
-                    </tr>
-                    <tr>
-                        <td>DoubleTake</td>
-                        <td>A fast-paced memory challenge to match pairs of cards.</td>
-                        <td>Puzzle</td>
-                    </tr>
-                    <tr>
-                        <td>LabyrinthX</td>
-                        <td>Navigate and solve procedurally generated random mazes.</td>
-                        <td>Adventure</td>
-                    </tr>
-                    <tr>
-                        <td>DeepKnight</td>
-                        <td>Test your strategic wits against an intelligent chess AI.</td>
-                        <td>Strategy</td>
-                    </tr>
-                    <tr>
-                        <td>OrbitMan</td>
-                        <td>Dodge the ghosts and consume every power orb on the grid.</td>
-                        <td>Arcade</td>
-                    </tr>
-                    <tr>
-                        <td>HyperDrive 3D</td>
-                        <td>High-octane pseudo-3D racer with oncoming traffic to evade.</td>
-                        <td>Action</td>
-                    </tr>
-                    <tr>
-                        <td>OmniQuiz</td>
-                        <td>Test your knowledge with dynamic trivia and interactive questions!</td>
-                        <td>Quiz</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>        
-        
-        <!-- 🎖️ Community Favorites -->
-        <section class="game-ranking" data-aos="fade-up">
-            <h2>🎖️ Community Favorites</h2>
-            <ol>
-                <li>1️⃣ <strong>Telepath</strong> - A mind-bending mentalism trick!</li>
-                <li>2️⃣ <strong>OrbitMan</strong> - Retro arcade nostalgia and guaranteed thrills!</li>
-                <li>3️⃣ <strong>HyperDrive 3D</strong> - Fast-paced highway racing excitement.</li>
-                <li>4️⃣ <strong>DoubleTake</strong> - Train your memory and focus!</li>
-                <li>5️⃣ <strong>DeepKnight</strong> - Intellectual chess challenge against an AI.</li>
-                <li>6️⃣ <strong>LabyrinthX</strong> - Escape the maze in this procedural adventure.</li>
-                <li>7️⃣ <strong>OmniQuiz</strong> - Test your knowledge across fun trivia rounds!</li>
-            </ol>
-        </section>
-        
+        <!-- 🎮 Direct Play Iframe Modal -->
+        <div id="game-popup" class="game-popup">
+            <div class="game-popup-content">
+                <div class="game-popup-header">
+                    <div class="game-controls">
+                        <button id="fullscreen-btn" class="fullscreen-btn" onclick="toggleFullscreen()">
+                            <i data-lucide="maximize"></i> Fullscreen
+                        </button>
+                        <button id="reload-game-btn" class="reload-game-btn" onclick="reloadGame()">
+                            <i data-lucide="refresh-cw"></i> Restart
+                        </button>
+                    </div>
+                    <span class="close-game-btn" onclick="closeGamePopup()">
+                        <i data-lucide="x"></i>
+                    </span>
+                </div>        
+                <iframe id="game-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+
     </main>
     
-    <!-- 🌍 Footer with sources and credits -->
+    <!-- 🌍 Modernized Footer -->
     <footer class="footer" data-aos="fade-up">
         <p>📚 Sources & Documentation:</p>
         <ul>
             <li><a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a></li>
             <li><a href="https://swiperjs.com/" target="_blank">Swiper.js</a></li>
             <li><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
-            <li><a href="https://lucide.dev/" target="_blank">LucideIcon</a></li>
+            <li><a href="https://lucide.dev/" target="_blank">Lucide</a></li>
         </ul>
-        <!-- 🔗 Button to GitHub -->
         <div class="github-btn">
-            <a href="#" target="_blank">
+            <a href="https://github.com/TEERTH-KOLHI/7-Games" target="_blank">
                 <img src="images/github.svg" alt="GitHub" class="github-icon"> View on GitHub
             </a>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
-        AOS.init();
+        lucide.createIcons();
+        AOS.init({ duration: 700, once: true });
+
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: "auto",
             spaceBetween: 20,
             loop: true,
             autoplay: {
-                delay: 3000,
+                delay: 2600,
                 disableOnInteraction: false,
             },
             breakpoints: {
                 640: { slidesPerView: 2, spaceBetween: 20 },
-                768: { slidesPerView: 3, spaceBetween: 30 },
-                1024: { slidesPerView: 4, spaceBetween: 40 }
+                768: { slidesPerView: 3, spaceBetween: 24 },
+                1024: { slidesPerView: 4, spaceBetween: 30 }
             }
         });
 
         function toggleMenu() {
             const navLinks = document.querySelector(".nav-links");
             navLinks.classList.toggle("active");
+        }
+
+        function playRandomGame() {
+            const randomIndex = Math.floor(Math.random() * 7);
+            openGame(randomIndex);
         }
     </script>
 </body>
