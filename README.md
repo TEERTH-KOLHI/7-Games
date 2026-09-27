@@ -1,90 +1,105 @@
-
-# 🎮✨ Gamely - Site Web de Jeux  
+# 🎮✨ Gamely - Web Gaming Hub
 
 <div align="center">  
     <img src="https://i.imgur.com/4xjqeFT.png" alt="Gamely Banner" width="440" height="282.5">  
 </div>  
 
-> **"Le jeu est une porte vers l'imaginaire, Gamely vous y emmène !"**  
+> **"Gaming is a gateway to imagination — Gamely takes you there!"**
 
-**Gamely** est un mini-site web interactif regroupant plusieurs jeux accessibles en ligne. Ce projet a été réalisé dans le cadre d'un exercice de **NSI** visant à développer un site web avec **HTML, CSS et JavaScript**.  
-
----  
-## 🚀 Description du Projet  
-
-🌟 **Gamely** propose une **expérience de jeu immersive** avec :  
-- 🎨 **Un design moderne** et fluide.  
-- 📱 **Une interface responsive** adaptée aux petits écrans.
-- 🎡 **Un carrousel interactif** pour découvrir les jeux facilement.  
-- 🕹️ **Des jeux intégrés accessibles en un clic** !  
-
-🔗 **Le site comprend trois pages principales :**  
-- 🏠 **Page d'accueil** : Présentation et accès aux jeux via un carrousel dynamique.  
-- ℹ️ **Page "À Propos"** : Explication du projet et de son objectif.  
-- 🎮 **Page "Jeux"** : Liste des jeux disponibles avec une interface immersive.  
-
----  
-## 📌 Consignes du Projet  
-
-✅ **Objectifs :**  
-- Créer un site web avec **au moins 3 pages distinctes**.  
-- Intégrer une **feuille de style CSS** avec **au moins 10 propriétés CSS**.  
-- Inclure un **menu de navigation fluide et responsive**.  
-- Ajouter **listes, tableaux et liens internes/externes**.  
-- Insérer **des images illustratives et des liens cliquables**.  
-- Respecter les **bonnes pratiques de développement web** et **indiquer les sources**.  
-
----  
-## 🎲 Jeux Intégrés  
-
-> Découvrez une sélection de **jeux variés** intégrés à Gamely 🎮  
-*De nouveaux jeux seront ajoutés au fil du temps, et les jeux déjà existants seront enrichis.*  
-
-> [!NOTE]
-> ***<span style="color: ff4081;">Je ne suis pas le créateur de la plupart des jeux</span>***.
-> mais je les ai modifiés pour qu'ils soient intégrables,
-> compatibles, optimisés et pour améliorer leur design.
-
-
-| 🏆 **Nom du Jeu** | 📝 **Description** |  
-|----------------|----------------|  
-| **Telepath** *(21 Cards Mind Trick)* | Devinez la carte cachée grâce à un système de manipulation mathématique. |  
-| **OrbitMan** | Incarnez OrbitMan et mangez toutes les capsules en évitant les spectres ! |  
-| **DoubleTake** *(Jeu de mémoire)* | Testez votre mémoire en retrouvant les paires de cartes identiques. |  
-| **LabyrinthX** *(Génération de labyrinthe)* | Trouvez la sortie d’un dédale généré aléatoirement. |  
-| **HyperDrive 3D** | Un jeu de course en 3D où vous devez éviter les obstacles et franchir la ligne d'arrivée. |  
-| **DeepKnight** *(Jeu d'échecs IA)* | Affrontez une intelligence artificielle aux échecs et testez vos stratégies. |  
-| **OmniQuiz** | Testez vos connaissances avec des questions variées sur Gamely ! | 
-
----  
-## 🎨 Technologies Utilisées  
-
-🔧 **Gamely utilise plusieurs outils et frameworks pour améliorer l'expérience utilisateur :**  
-
-- 🎨 **[TailwindCSS](https://tailwindcss.com/)** → Design rapide et moderne.  
-- 🎡 **[Swiper.js](https://swiperjs.com/)** → Carrousel interactif et fluide.  
-- 🎭 **[AOS.js](https://michalsnik.github.io/aos/)** → Animations au scroll.  
-- 🌀 **[GSAP](https://greensock.com/gsap/)** → Animations fluides et dynamiques.  
-- 📢 **[SweetAlert2](https://sweetalert2.github.io/)** → Fenêtre d’informations moderne.  
-- 🎨 **[Lucide Icons](https://lucide.dev/)** → Icônes stylées pour un rendu professionnel.  
-
----
-## 📚 Ressources Documentaires Utilisées
-
-1. 1️⃣ **[MDN Web Docs](https://developer.mozilla.org/)** - Documentation
-2. 2️⃣ **[Stack Overflow](https://stackoverflow.com/)** - Forum
-3. 3️⃣ **[CSS-Tricks](https://css-tricks.com/)** - Blog
-4. 4️⃣ **[Can I use](https://caniuse.com/)** - Outil de compatibilité
-5. 5️⃣ **[Dribbble](https://dribbble.com/)** - Plateforme créative (inspiration)
+**Gamely** is an interactive web-based gaming hub featuring 7 accessible games playable directly in the browser. Built using modern HTML5, Vanilla CSS, and JavaScript, it provides an immersive arcade experience with responsive layouts, smooth animations, and zero installation requirements.
 
 ---
 
-## 📄 Licence
+## 🚀 Key Features
 
-Ce projet est sous licence MIT. Veuillez consulter le fichier [LICENSE](./LICENSE) pour plus de détails.
+🌟 **Gamely** delivers an engaging arcade experience:
+- 🎨 **Modern Cyber & Neon Design**: Sleek dark modes, glassmorphic interfaces, and glowing accents.
+- 📱 **Fully Responsive**: Seamlessly adapts to desktop, tablet, and mobile screens.
+- 🎡 **Interactive 3D Carousel**: Effortlessly browse games using a dynamic Swiper.js carousel.
+- 🕹️ **7 Playable Web Games**: Instant one-click launch with integrated control guides.
+- ⚡ **Zero Dependencies / Fast Loading**: Lightweight client-side architecture with high performance.
 
 ---
 
-## 🙏 Remerciements
+## 🎲 Included Games
 
-Merci d'avoir pris le temps de découvrir et d'utiliser **Gamely**. Si ce projet vous a plu ou vous a été utile, n'hésitez pas à lui attribuer une étoile ⭐ sur GitHub. Votre soutien est grandement apprécié !
+Explore the curated collection of 7 games integrated into Gamely:
+
+| 🏆 **Game Title** | 🎯 **Category** | 📝 **Description** |
+|:---|:---|:---|
+| **Telepath** | Mindblowing / Puzzle | Guess the hidden card through an ingenious mathematical 21-card divination system. |
+| **DoubleTake** | Memory / Casual | Test your memory and concentration by matching identical pairs of cards. |
+| **LabyrinthX** | Adventure / Strategy | Explore and solve procedurally generated random mazes with built-in path solver. |
+| **DeepKnight** | Strategy / AI | Challenge an intelligent chess engine with custom speeds and autonomous bot modes. |
+| **OrbitMan** | Classic Arcade | Relive the 80s arcade rush: dodge ghosts, consume power capsules, and achieve high scores. |
+| **HyperDrive 3D** | Action / Racing | A fast-paced pseudo-3D highway racer where you dodge traffic and sprint to the finish line. |
+| **OmniQuiz** | Trivia / Quiz | Put your knowledge to the test with dynamic multiple-choice, true/false, and text trivia! |
+
+---
+
+## 🎨 Technologies & Libraries
+
+Gamely leverages modern web standards and high-performance libraries:
+
+- 🎨 **HTML5 & Vanilla CSS**: Custom responsive design system, neon gradients, and glassmorphism.
+- ⚡ **JavaScript (ES6+)**: Modular game engines, event handling, and interactive state management.
+- 🎡 **[Swiper.js](https://swiperjs.com/)**: Smooth, touch-friendly 3D card carousel.
+- 🎭 **[AOS.js](https://michalsnik.github.io/aos/)**: Scroll-triggered reveal animations.
+- 🌀 **[GSAP](https://greensock.com/gsap/)**: High-performance UI micro-interactions.
+- 🎨 **[Lucide Icons](https://lucide.dev/)**: Clean, consistent vector icon set.
+
+---
+
+## 🕹️ Getting Started
+
+Running Gamely locally is fast and straightforward:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/TEERTH-KOLHI/7-Games.git
+   cd 7-Games
+   ```
+
+2. **Open the project:**
+   Simply open `interface/index.html` in your favorite web browser:
+   * Double-click `interface/index.html`, or
+   * Serve with VS Code Live Server / any static HTTP server:
+     ```bash
+     npx serve interface
+     ```
+
+---
+
+## 📂 Project Structure
+
+```text
+├── Game/
+│   ├── DeepKnight/       # AI Chess Engine
+│   ├── DoubleTake/       # Card Memory Game
+│   ├── HyperDrive3D/     # 3D Highway Racer
+│   ├── LabyrinthX/       # Procedural Maze Runner
+│   ├── OmniQuiz/         # Interactive Trivia Game
+│   ├── OrbitMan/         # Classic Retro Arcade Game
+│   └── Telepath/         # 21-Card Mentalism Game
+├── interface/
+│   ├── css/              # Design system & responsive styles
+│   ├── images/           # Hub banners, game artwork & icons
+│   ├── js/               # Core hub logic, game registry & modals
+│   ├── index.html        # Main landing portal & 3D carousel
+│   ├── jeux.html         # Full game gallery & catalog
+│   └── about.html        # Project overview & game rankings
+├── LICENSE.md            # MIT License
+└── README.md             # Project documentation
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See [LICENSE.md](./LICENSE.md) for details.
+
+---
+
+## 🙏 Acknowledgments
+
+Thank you for checking out **Gamely**! If you enjoy playing these games, feel free to give the repository a star ⭐ on GitHub.
