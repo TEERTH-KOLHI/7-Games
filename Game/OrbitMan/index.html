@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf8">
+    <title>OrbitMan Arcade</title>
+    <meta name="description" content="OrbitMan arcade rétro avec IA et niveaux optimisés.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="./static/style/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="mod-panel">
+            <div class="hd">
+                <h1 class="neon-title">🕹️ ORBITMAN</h1>
+                <p class="neon-subtitle">ÉDITION ARCADE RÉTRO</p>
+            </div>
+            <div class="bd">
+                <canvas id="canvas" width="960" height="640">Votre navigateur ne supporte pas le canvas.</canvas>
+            </div>
+            <div class="ft">
+                <div class="info">
+                    <span class="control-badge">⌨️ <strong>Flèches / ZQSD</strong> : Déplacer</span>
+                    <span class="control-badge">⏸️ <strong>Espace</strong> : Pause / Continuer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./static/script/game.js"></script>
+    <script src="./static/script/index.js"></script>
+</body>
+</html>
