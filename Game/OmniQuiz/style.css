@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 50% 20%, #160d2e 0%, #0c081e 50%, #03020a 100%);
+  color: #f1f5f9;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* 🎯 Écran d'intro */
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #1b0e36 0%, #080414 100%);
+  z-index: 1000;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.intro-screen .quiz-logo {
+  max-width: 320px;
+  width: 80%;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.6));
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: #ffffff;
+  border: none;
+  padding: 14px 34px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.5);
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 0 35px rgba(236, 72, 153, 0.7);
+}
+
+/* 🎯 Logo fixe après intro */
+.quiz-logo-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  transition: all 0.5s ease;
+}
+
+.quiz-logo-fixed {
+  width: 180px;
+  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.45));
+}
+
+/* 🎯 Badge de question */
+.badge-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.question-badge {
+  background: linear-gradient(90deg, rgba(168, 85, 247, 0.25), rgba(6, 182, 212, 0.25));
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 🎯 Conteneur principal du QCM */
+.quiz-container {
+  width: 90%;
+  max-width: 650px;
+  margin: 30px auto;
+  background: rgba(22, 15, 46, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(168, 85, 247, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🎯 Question */
+.quiz-header h2 {
+  font-size: 22px;
+  margin-bottom: 22px;
+  text-align: center;
+  color: #f1f5f9;
+  font-weight: 600;
+  line-height: 1.4;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 🎯 Options */
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  color: #e2e8f0;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(168, 85, 247, 0.2);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.quiz-option:hover {
+  transform: translateX(4px);
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.12);
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.3);
+}
+
+.quiz-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #a855f7;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.quiz-option input[type="radio"]:checked {
+  background: #ec4899;
+  border-color: #ec4899;
+  box-shadow: 0 0 10px #ec4899;
+}
+
+.quiz-option label {
+  cursor: pointer;
+  width: 100%;
+}
+
+.quiz-option input:checked + label {
+  color: #f472b6;
+  font-weight: 600;
+}
+
+/* 🎯 Bouton suivant */
+.submit-btn {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: white;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 14px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.4);
+  transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #9333ea, #db2777);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(236, 72, 153, 0.55);
+}
+
+/* 🎯 Champ texte libre */
+.text-input {
+  display: none;
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  border: 1.5px solid #a855f7;
+  border-radius: 10px;
+  background: rgba(10, 6, 22, 0.7);
+  color: #f8fafc;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.text-input::placeholder {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.text-input:focus {
+  border-color: #ec4899;
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+/* 🎯 Vrai / Faux */
+.true-false-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+#true-false-options {
+  display: flex;
+  gap: 16px;
+}
+
+.true-false-btn {
+  padding: 12px 30px;
+  border: 1.5px solid #a855f7;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f1f5f9;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+.true-false-btn:hover {
+  background: rgba(168, 85, 247, 0.2);
+  transform: scale(1.04);
+}
+
+.true-false-btn.selected {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 500px) {
+  .quiz-container {
+    width: 95%;
+    padding: 20px;
+  }
+}
