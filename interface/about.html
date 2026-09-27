@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Gamely</title>
+    
+    <!-- 🔗 Styles & Frameworks -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <!-- 🎮 Navigation -->
+    <header class="header">
+        <h1 class="logo"><a href="index.html" class="neon-text">GAMELY</a></h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html"><i data-lucide="home"></i> Accueil</a></li>
+                <li><a href="about.html"><i data-lucide="info"></i> À Propos</a></li>
+                <li class="nav-jeux"><a href="jeux.html"><i data-lucide="gamepad-2"></i> Jeux</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i data-lucide="menu"></i>
+        </div>
+    </header> 
+    <div class="container">
+        <main class="content">
+            <!-- 🎮 Section principale -->
+            <section class="hero2" data-aos="fade-up">
+                <a href="index.html"><img src="images/gamely.png" alt="Gamely Logo" class="hero-logo2" data-aos="fade-up"></a>
+                <h1 class="hero-title2">
+                    <a href="#explanation-carousel" style="color: inherit; text-decoration: none;">
+                        À Propos de Gamely
+                    </a>  
+                </h1>
+                <p class="about-text">
+                    <strong>Gamely</strong> – Une <span class="neon-textC">vitrine de jeux</span> variés, optimisés, adaptés et améliorés. 
+                <br>Je n’en suis pas le créateur, mais j’ai travaillé sur leur compatibilité, leur design 
+                <br> et la correction de bugs pour une meilleure expérience 🚀
+                </p>
+            </section>
+    </div>
+    <!-- 🎠 Carrousel de Présentation -->
+    <div id="explanation-carousel" class="swiper-container presentation-carousel" data-aos="fade-up">
+        <div class="swiper-wrapper">     
+            <!-- 📌 Slide 1 : Informations sur les Jeux -->
+            <div class="swiper-slide table-container">
+                <h2>📊 Informations sur les Jeux</h2>
+                <table class="game-table">
+                    <thead>
+                        <tr>
+                            <th>🎮 Jeux</th>
+                            <th>📝 Description</th>
+                            <th>📌 Catégorie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Telepath</td>
+                            <td>Un jeu qui lit dans votre tête et qui vous retourne le cerveau !</td>
+                            <td>Mindblowing</td>
+                        </tr>
+                        <tr>
+                            <td>DoubleTake</td>
+                            <td>Un jeu de mémoire où vous devez retrouver les paires.</td>
+                            <td>Puzzle</td>
+                        </tr>
+                        <tr>
+                            <td>LabyrinthX</td>
+                            <td>Explorez et résolvez des labyrinthes générés aléatoirement.</td>
+                            <td>Aventure</td>
+                        </tr>
+                        <tr>
+                            <td>DeepKnight</td>
+                            <td>Jouez aux échecs contre une intelligence artificielle.</td>
+                            <td>Réflexion</td>
+                        </tr>
+                        <tr>
+                            <td>OrbitMan</td>
+                            <td>Évitez les fantômes et mangez toutes les pac-gommes.</td>
+                            <td>Arcade</td>
+                        </tr>
+                        <tr>
+                            <td>HyperDrive 3D</td>
+                            <td>Course en 3D avec obstacles à éviter.</td>
+                            <td>Action</td>
+                        </tr>
+                        <tr>
+                            <td>OmniQuiz</td>
+                            <td>Testez vos connaissances avec des questions variées sur Gamely !</td>
+                            <td>Quiz</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>     
+    
+            <!-- 📌 Slide 2 : Classement des Jeux -->
+            <div class="swiper-slide">
+                <div class="table-container">
+                <h2>🎖️ Top Jeux Préférés</h2>
+                <ol>
+                    <li>1️⃣ <strong>Telepath</strong> - Un jeu qui retourne ton cerveau !</li>
+                    <li>2️⃣ <strong>OrbitMan</strong> - Nostalgie et divertissement garantis !</li>
+                    <li>3️⃣ <strong>HyperDrive 3D</strong> - Une course effrénée.</li>
+                    <li>4️⃣ <strong>DoubleTake</strong> - Exerce ta mémoire !</li>
+                    <li>5️⃣ <strong>DeepKnight</strong> - Défi intellectuel contre une IA.</li>
+                    <li>6️⃣ <strong>LabyrinthX</strong> - Évasion et aventure.</li>
+                    <li>7️⃣ <strong>OmniQuiz</strong> - Testez vos connaissances sur Gamely !</li>
+                </ol>
+                </div> 
+            </div>
+            
+            <!-- 📌 Slide 3 : Comment fonctionne Gamely -->
+            <div class="swiper-slide">
+                <div class="table-container">
+                <h2>🔄 Comment fonctionne Gamely ?</h2>
+                <ol>
+                    <li>1️⃣ Explorez la galerie des jeux</li>
+                    <li>2️⃣ Cliquez sur un jeu pour ouvrir sa fenêtre dédiée</li>
+                    <li>3️⃣ Jouez immédiatement sans téléchargement</li>
+                    <li>4️⃣ Comparez vos scores et partagez avec vos amis</li>
+                </ol>
+                </div>
+            </div>  
+            <!-- 📌 Slide 5 : Ressources Documentaires Utilisées -->
+            <div class="swiper-slide">
+                <div class="table-container">
+                    <h2>📚 Ressources Documentaires Utilisées</h2>
+                    <ol>
+                        <li>1️⃣ <strong><a href="https://developer.mozilla.org/">MDN Web Docs</a></strong> - Documentation</li>
+                        <li>2️⃣ <strong><a href="https://stackoverflow.com/">Stack Overflow</a></strong> - Forum</li>
+                        <li>3️⃣ <strong><a href="https://css-tricks.com/">CSS-Tricks</a></strong> - Blog</li>
+                        <li>5️⃣ <strong><a href="https://caniuse.com/">Can I use</a></strong> - outil de compatibilité</li>
+                        <li>6️⃣ <strong><a href="https://dribbble.com/">Dribbble</a></strong> - Plateforme créative</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- 📌 Slide 4 : Technologies Utilisées -->
+            <div class="swiper-slide">
+                <div class="table-container">
+                <h2>🚀 Technologies Utilisées</h2>
+                <ul>
+                    <li>🎨 <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a> - Design rapide</li>
+                    <li>🎡 <a href="https://swiperjs.com/" target="_blank">Swiper.js</a> - Carrousel interactif</li>
+                    <li>🔥 <a href="https://aos.js.org/" target="_blank">AOS.js</a> - Animations au scroll</li>
+                    <li>🌀 <a href="https://greensock.com/gsap/" target="_blank">GSAP</a> - Animations fluides</li>
+                    <li>📢 <a href="https://sweetalert2.github.io/" target="_blank">SweetAlert2</a> - Fenêtres d’alerte</li>
+                    <li>🎭 <a href="https://lucide.dev/" target="_blank">Lucide Icons</a> - Icônes stylées</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    
+        <!-- Pagination et boutons de navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    
+    <!-- 🌍 Footer avec sources et crédits -->
+    <footer class="footer" data-aos="fade-up">
+        <p>📚 Sources & Documentation :</p>
+        <ul>
+            <li><a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a></li>
+            <li><a href="https://swiperjs.com/" target="_blank">Swiper.js</a></li>
+            <li><a href="https://developer.mozilla.org/fr/" target="_blank">MDN</a></li>
+            <li><a href="https://lucide.dev/" target="_blank">LucideIcon</a></li>
+        </ul>
+        <!-- 🔗 Bouton vers GitHub -->
+        <div class="github-btn">
+            <a href="#" target="_blank">
+                <img src="images/github.svg" alt="GitHub" class="github-icon"> Voir sur GitHub
+            </a>
+        </div>
+    </footer>
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            AOS.init();
+        
+            var swiper = new Swiper(".presentation-carousel", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                effect: "slide",
+                speed: 600,
+            });
+        
+            function toggleMenu() {
+                const navLinks = document.querySelector(".nav-links");
+                navLinks.classList.toggle("active");
+            }
+        </script>    
+</body>
+</html>
+
