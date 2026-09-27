@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>DeepKnight - Échecs IA</title>
+  <title>DeepKnight - AI Chess Engine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
 <link rel="stylesheet" href="./style.css">
 
@@ -12,21 +12,21 @@
 <section id="view">
   <aside>
     <div class="control-card">
-      <h3 title="Mode Autonome IA">🤖 IA Auto</h3>
-      <label for="white-random" title="IA Blanc"><input type="checkbox" id="white-random" /><svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" class="white"><use href="#king" /></svg></label>
-      <label for="black-random" title="IA Noir"><input type="checkbox" id="black-random" checked /><svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" class="black"><use href="#king" /></svg></label>
+      <h3 title="Autonomous AI Mode">🤖 Auto AI</h3>
+      <label for="white-random" title="White AI"><input type="checkbox" id="white-random" /><svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" class="white"><use href="#king" /></svg></label>
+      <label for="black-random" title="Black AI"><input type="checkbox" id="black-random" checked /><svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" class="black"><use href="#king" /></svg></label>
     </div>
     <div class="control-card">
-      <h3 title="Vitesse de jeu">⚡ Vitesse</h3>
+      <h3 title="Move Speed">⚡ Speed</h3>
       <label for="speed-slow"><input type="radio" name="speed" id="speed-slow" /><span>1x</span></label>
       <label for="speed-medium"><input type="radio" name="speed" id="speed-medium" checked /><span>2x</span></label>
       <label for="speed-fast"><input type="radio" name="speed" id="speed-fast" /><span>4x</span></label>
       <label for="speed-asap"><input type="radio" name="speed" id="speed-asap" /><span>Max</span></label>
     </div>
     <div class="control-card">
-      <h3 title="Point de vue">👁️ Vue</h3>
-      <label for="white-perspective" title="Vue Blancs"><input type="radio" name="perspective" id="white-perspective" checked /><svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" class="white"><use href="#king" /></svg></label>
-      <label for="black-perspective" title="Vue Noirs"><input type="radio" name="perspective" id="black-perspective" /><svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" class="black"><use href="#king" /></svg></label>
+      <h3 title="Perspective View">👁️ View</h3>
+      <label for="white-perspective" title="White Perspective"><input type="radio" name="perspective" id="white-perspective" checked /><svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" class="white"><use href="#king" /></svg></label>
+      <label for="black-perspective" title="Black Perspective"><input type="radio" name="perspective" id="black-perspective" /><svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" class="black"><use href="#king" /></svg></label>
     </div>
   </aside>
   <div id="board"></div>

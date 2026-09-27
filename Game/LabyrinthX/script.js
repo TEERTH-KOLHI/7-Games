@@ -200,7 +200,15 @@ function movePlayer(event) {
     ArrowUp: { dx: 0, dy: -1 },
     ArrowDown: { dx: 0, dy: 1 },
     ArrowLeft: { dx: -1, dy: 0 },
-    ArrowRight: { dx: 1, dy: 0 }
+    ArrowRight: { dx: 1, dy: 0 },
+    w: { dx: 0, dy: -1 },
+    W: { dx: 0, dy: -1 },
+    s: { dx: 0, dy: 1 },
+    S: { dx: 0, dy: 1 },
+    a: { dx: -1, dy: 0 },
+    A: { dx: -1, dy: 0 },
+    d: { dx: 1, dy: 0 },
+    D: { dx: 1, dy: 0 }
   };
 
   if (PlayerCanMove) {

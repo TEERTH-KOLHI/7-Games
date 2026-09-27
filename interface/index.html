@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamely - Accueil</title>
+    <title>Gamely - Home</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,9 +17,9 @@
         <h1 class="logo"><a href="index.html" class="neon-text">GAMELY</a></h1>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html"><i data-lucide="home"></i> Accueil</a></li>
-                <li><a href="about.html"><i data-lucide="info"></i> À Propos</a></li>
-                <li class="nav-jeux"><a href="jeux.html"><i data-lucide="gamepad-2"></i> Jeux</a></li>
+                <li><a href="index.html"><i data-lucide="home"></i> Home</a></li>
+                <li><a href="about.html"><i data-lucide="info"></i> About</a></li>
+                <li class="nav-jeux"><a href="jeux.html"><i data-lucide="gamepad-2"></i> Games</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -32,10 +32,10 @@
             <img src="images/gamely.png" alt="Gamely Logo" class="hero-logo" data-aos="fade-up">
             <h1 class="hero-title">
                 <a href="#top_jeux" style="color: inherit; text-decoration: none;">
-                    Jouez à des Jeux Incroyables !
+                    Play Incredible Web Games!
                 </a>
             </h1>
-            <button class="play-button" onclick="window.location.href='jeux.html'">Jouer</button>
+            <button class="play-button" onclick="window.location.href='jeux.html'">Play Now</button>
         </section>
         
         <!-- 🎮 Carousel Jeux + liens ancres en js (vers page jeux.html) -->
@@ -85,99 +85,99 @@
                 <table id="popup-commands" class="popup-commands">
                     <thead>
                         <tr>
-                            <th>Touche</th>
+                            <th>Key</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Ct dynam. rempli via JS -->
+                        <!-- Dynamically filled via JS -->
                     </tbody>
                 </table>
         
-                <button id="play-game-btn" class="play-game-btn">Lancer le jeu</button>
+                <button id="play-game-btn" class="play-game-btn">Launch Game</button>
             </div>
         </div>        
 
-        <!-- Tableau d'informations -->
+        <!-- Game Information Table -->
         <section id="top_jeux" class="table-section title-line" data-aos="fade-up">
-            <h2>📊 Informations sur les Jeux</h2>
+            <h2>📊 Game Information & Features</h2>
             <table class="game-table">
                 <thead>
                     <tr>
-                        <th>🎮 Nom du Jeu</th>
+                        <th>🎮 Game Title</th>
                         <th>📝 Description</th>
-                        <th>📌 Catégorie</th>
+                        <th>📌 Category</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Telepath</td>
-                        <td>Un jeu qui lit dans votre tête et qui vous retourne le cerveau !</td>
+                        <td>A mind-bending card trick that reads your thoughts through math!</td>
                         <td>Mindblowing</td>
                     </tr>
                     <tr>
                         <td>DoubleTake</td>
-                        <td>Un jeu de mémoire où vous devez retrouver les paires.</td>
+                        <td>A fast-paced memory challenge to match pairs of cards.</td>
                         <td>Puzzle</td>
                     </tr>
                     <tr>
                         <td>LabyrinthX</td>
-                        <td>Explorez et résolvez des labyrinthes générés aléatoirement.</td>
-                        <td>Aventure</td>
+                        <td>Navigate and solve procedurally generated random mazes.</td>
+                        <td>Adventure</td>
                     </tr>
                     <tr>
                         <td>DeepKnight</td>
-                        <td>Jouez aux échecs contre une intelligence artificielle.</td>
-                        <td>Réflexion</td>
+                        <td>Test your strategic wits against an intelligent chess AI.</td>
+                        <td>Strategy</td>
                     </tr>
                     <tr>
                         <td>OrbitMan</td>
-                        <td>Évitez les fantômes et mangez toutes les pac-gommes.</td>
+                        <td>Dodge the ghosts and consume every power orb on the grid.</td>
                         <td>Arcade</td>
                     </tr>
                     <tr>
                         <td>HyperDrive 3D</td>
-                        <td>Course en 3D avec obstacles à éviter.</td>
+                        <td>High-octane pseudo-3D racer with oncoming traffic to evade.</td>
                         <td>Action</td>
                     </tr>
                     <tr>
                         <td>OmniQuiz</td>
-                        <td>Testez vos connaissances avec des questions variées sur Gamely !</td>
+                        <td>Test your knowledge with dynamic trivia and interactive questions!</td>
                         <td>Quiz</td>
                     </tr>
                 </tbody>
             </table>
         </section>        
         
-        <!-- 🎖️ Classement des Jeux -->
+        <!-- 🎖️ Community Favorites -->
         <section class="game-ranking" data-aos="fade-up">
-            <h2>🎖️ Top Jeux Préférés</h2>
+            <h2>🎖️ Community Favorites</h2>
             <ol>
-                <li>1️⃣ <strong>Telepath</strong> - Un jeu qui retourne ton cerveau !</li>
-                <li>2️⃣ <strong>OrbitMan</strong> - Nostalgie et divertissement garantis !</li>
-                <li>3️⃣ <strong>HyperDrive 3D</strong> - Une course effrénée.</li>
-                <li>4️⃣ <strong>DoubleTake</strong> - Exerce ta mémoire !</li>
-                <li>5️⃣ <strong>DeepKnight</strong> - Défi intellectuel contre une IA.</li>
-                <li>6️⃣ <strong>LabyrinthX</strong> - Évasion et aventure.</li>
-                <li>7️⃣ <strong>OmniQuiz</strong> - Testez vos connaissances sur Gamely !</li>
+                <li>1️⃣ <strong>Telepath</strong> - A mind-bending mentalism trick!</li>
+                <li>2️⃣ <strong>OrbitMan</strong> - Retro arcade nostalgia and guaranteed thrills!</li>
+                <li>3️⃣ <strong>HyperDrive 3D</strong> - Fast-paced highway racing excitement.</li>
+                <li>4️⃣ <strong>DoubleTake</strong> - Train your memory and focus!</li>
+                <li>5️⃣ <strong>DeepKnight</strong> - Intellectual chess challenge against an AI.</li>
+                <li>6️⃣ <strong>LabyrinthX</strong> - Escape the maze in this procedural adventure.</li>
+                <li>7️⃣ <strong>OmniQuiz</strong> - Test your knowledge across fun trivia rounds!</li>
             </ol>
         </section>
         
     </main>
     
-    <!-- 🌍 Footer avec sources et crédits -->
+    <!-- 🌍 Footer with sources and credits -->
     <footer class="footer" data-aos="fade-up">
-        <p>📚 Sources & Documentation :</p>
+        <p>📚 Sources & Documentation:</p>
         <ul>
             <li><a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a></li>
             <li><a href="https://swiperjs.com/" target="_blank">Swiper.js</a></li>
-            <li><a href="https://developer.mozilla.org/fr/" target="_blank">MDN</a></li>
+            <li><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
             <li><a href="https://lucide.dev/" target="_blank">LucideIcon</a></li>
         </ul>
-        <!-- 🔗 Bouton vers GitHub -->
+        <!-- 🔗 Button to GitHub -->
         <div class="github-btn">
             <a href="#" target="_blank">
-                <img src="images/github.svg" alt="GitHub" class="github-icon"> Voir sur GitHub
+                <img src="images/github.svg" alt="GitHub" class="github-icon"> View on GitHub
             </a>
         </div>
     </footer>

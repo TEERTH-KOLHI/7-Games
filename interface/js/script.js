@@ -1,50 +1,50 @@
-// 🕹 Données des commandes par jeu
+// 🕹 Game Controls Data
 const gameCommands = [
     { // Telepath
         keys: [
-            { icon: "mouse", action: "Cliquer sur les boutons" }
+            { icon: "mouse", action: "Click buttons to select column" }
         ]
     },
     { // DoubleTake
         keys: [
-            { icon: "mouse", action: "Cliquer sur les cartes" }
+            { icon: "mouse", action: "Click cards to flip and match" }
         ]
     },
     { // LabyrinthX
         keys: [
-            { icon: "arrow-up", action: "Aller en haut" },
-            { icon: "arrow-down", action: "Aller en bas" },
-            { icon: "arrow-left", action: "Aller à gauche" },
-            { icon: "arrow-right", action: "Aller à droite" }
+            { icon: "arrow-up", action: "Move Up (or W)" },
+            { icon: "arrow-down", action: "Move Down (or S)" },
+            { icon: "arrow-left", action: "Move Left (or A)" },
+            { icon: "arrow-right", action: "Move Right (or D)" }
         ]
     },
     { // DeepKnight
         keys: [
-            { icon: "mouse", action: "Déplacer les pièces" }
+            { icon: "mouse", action: "Drag and drop chess pieces" }
         ]
     },
     { // OrbitMan
         keys: [
-            { key: "Espace", action: "Pause" },
-            { icon: "arrow-up", action: "Aller en haut" },
-            { icon: "arrow-down", action: "Aller en bas" },
-            { icon: "arrow-left", action: "Aller à gauche" },
-            { icon: "arrow-right", action: "Aller à droite" }
+            { key: "Space", action: "Pause / Resume" },
+            { icon: "arrow-up", action: "Move Up" },
+            { icon: "arrow-down", action: "Move Down" },
+            { icon: "arrow-left", action: "Move Left" },
+            { icon: "arrow-right", action: "Move Right" }
         ]
     },
     { // HyperDrive 3D
         keys: [
-            { key: "C", action: "Insérer une pièce" },
-            { key: "M", action: "Couper le son" },
-            { icon: "arrow-left", action: "Déplacer gauche" },
-            { icon: "arrow-right", action: "Déplacer droite" },
-            { icon: "arrow-up", action: "Accélérer" },
-            { icon: "arrow-down", action: "Ralentir" }
+            { key: "C", action: "Start / Insert Coin" },
+            { key: "M", action: "Mute / Unmute Audio" },
+            { icon: "arrow-left", action: "Steer Left" },
+            { icon: "arrow-right", action: "Steer Right" },
+            { icon: "arrow-up", action: "Accelerate" },
+            { icon: "arrow-down", action: "Brake" }
         ]
     },
     { // OmniQuiz
         keys: [
-            { icon: "mouse", action: "Cliquer sur les boutons" }
+            { icon: "mouse", action: "Select answers and navigate" }
         ]
     },
 ];
@@ -52,7 +52,7 @@ const gameCommands = [
 // 📌 Fonction pour ouvrir la popup
 function openPopup(index) {
     if (index < 0 || index >= gamesData.length) {
-        console.error("Index invalide pour la popup.");
+        console.error("Invalid popup index.");
         return;
     }
 
@@ -92,17 +92,17 @@ function openPopup(index) {
     popupContainer.style.display = "flex";
 }
 
-// 📌 Fonction pour fermer la popup
+// 📌 Function to close the popup
 function closePopup() {
     document.getElementById("popup-container").style.display = "none";
 }
 
-// 📌 Fonction pour rediriger vers la page jeux.html avec un index de jeu (lien ancre)
+// 📌 Function to redirect to games page with game index anchor
 function redirectToJeux(index) {
     window.location.href = `jeux.html?game=${index}#popup-container`;
 }
 
-// 🔄 Vérifie si une redirection a eu lieu pour ouvrir la popup après un clic sur la page d'accueil
+// 🔄 Check if redirect parameter exists to open popup automatically
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has("game")) {
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// 🚀 Ferme la popup en cliquant en dehors
+// 🚀 Close popup when clicking outside of it
 window.onclick = function (event) {
     const popupContainer = document.getElementById("popup-container");
     if (event.target === popupContainer) {
@@ -153,12 +153,12 @@ function toggleMenu() {
     lucide.createIcons();
 }
 
-// ~~~~~~🕹 Données des jeux~~~~~~
+// ~~~~~~🕹 Games Registry Data~~~~~~
 const gamesData = [
     {
         title: "Telepath",
         image: "images/legilimens.png",
-        description: "Un jeu qui lit dans ta tête et qui te retourne le cerveau !",
+        description: "A mathematical mentalism trick that reads your mind and reveals your card!",
         link: "../Game/Telepath/index.html",
         creator: "Prashant",
         creatorLink: "https://github.com/Praashoo7"
@@ -166,7 +166,7 @@ const gamesData = [
     {
         title: "DoubleTake",
         image: "images/memorycard.png",
-        description: "Un jeu de mémoire où vous devez retrouver les paires.",
+        description: "Test your memory and concentration by finding identical pairs.",
         link: "../Game/DoubleTake/index.html",
         creator: "Talha",
         creatorLink: "https://github.com/he-is-talha"
@@ -174,7 +174,7 @@ const gamesData = [
     {
         title: "LabyrinthX",
         image: "images/labyquest.png",
-        description: "Explorez et résolvez des labyrinthes générés aléatoirement.",
+        description: "Navigate and solve procedurally generated random mazes.",
         link: "../Game/LabyrinthX/index.html",
         creator: "Yilmazer",
         creatorLink: "https://codepen.io/Abdullah-Yilmazer"
@@ -182,7 +182,7 @@ const gamesData = [
     {
         title: "DeepKnight",
         image: "images/aichess.png",
-        description: "Jouez aux échecs contre une intelligence artificielle.",
+        description: "Challenge an intelligent chess engine with dynamic bot modes.",
         link: "../Game/DeepKnight/index.html",
         creator: "jak_e",
         creatorLink: "https://codepen.io/jak_e"
@@ -190,7 +190,7 @@ const gamesData = [
     {
         title: "OrbitMan",
         image: "images/pacman.png",
-        description: "Évitez les fantômes et mangez toutes les pac-gommes.",
+        description: "Evade the ghosts and consume every power orb on the grid.",
         link: "../Game/OrbitMan/index.html",
         creator: "mumuy",
         creatorLink: "https://github.com/mumuy"
@@ -198,7 +198,7 @@ const gamesData = [
     {
         title: "HyperDrive 3D",
         image: "images/speedyverse.png",
-        description: "Course en 3D avec obstacles à éviter.",
+        description: "High-octane pseudo-3D racer with oncoming traffic to evade.",
         link: "../Game/HyperDrive3D/index.html",
         creator: "KodeMeister",
         creatorLink: "https://github.com/KodeMeister-YT"
@@ -206,7 +206,7 @@ const gamesData = [
     {
         title: "OmniQuiz",
         image: "images/quiz.png",
-        description: "Testez vos connaissances avec des questions variées sur Gamely !",
+        description: "Test your knowledge with dynamic trivia and interactive questions!",
         link: "../Game/OmniQuiz/QCM_JavaScript.html",
         creator: "Gamely",
         creatorLink: "#"
@@ -238,42 +238,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// 📌 Fonction pour ouvrir la popup du jeu
+// 📌 Function to open the game popup
 function openGame(index) {
     const gamePopup = document.getElementById("game-popup");
     const gameIframe = document.getElementById("game-iframe");
     const popupContainer = document.getElementById("popup-container"); 
 
-    // Vérification si l'index est valide
+    // Verify valid index
     if (index < 0 || index >= gamesData.length) {
-        console.error("Index invalide pour le jeu.");
+        console.error("Invalid game index.");
         return;
     }
 
-    // Ajoute une transition pour masquer le popup de présentation
+    // Fade out preview modal
     popupContainer.style.animation = "fadeOutScale 0.4s ease forwards";
     setTimeout(() => {
         popupContainer.style.display = "none";
         popupContainer.style.animation = "";
     }, 400);
 
-    // Charger le jeu dans l'iframe
+    // Load game URL in iframe
     gameIframe.src = gamesData[index].link;
 
-    // Affichage de la popup en plein écran avec un effet d'apparition
+    // Display fullscreen modal with animation
     gamePopup.style.display = "flex";
     gamePopup.style.animation = "fadeInScale 0.4s ease forwards";
 
-    // Ajout d'un délai pour éviter les bugs d'affichage
     setTimeout(() => {
         gamePopup.classList.add("visible");
     }, 50);
 
-    // Met à jour les icônes Lucide
     lucide.createIcons();
 }
 
-// 📌 Fermer le popup en cliquant en dehors
+// 📌 Close modal when clicking outside
 document.addEventListener("click", function (event) {
     const gamePopup = document.getElementById("game-popup");
     if (event.target === gamePopup) {
@@ -281,35 +279,33 @@ document.addEventListener("click", function (event) {
     }
 });
 
-// 📌 Fonction pour fermer la popup du jeu
+// 📌 Function to close the game modal
 function closeGamePopup() {
     const gamePopup = document.getElementById("game-popup");
     const gameIframe = document.getElementById("game-iframe");
 
-    // Supprime le lien pour arrêter le jeu
     gameIframe.src = "";
     gamePopup.style.display = "none";
 
-    // Si le mode plein écran est activé, on le désactive en fermant la popup
     if (document.fullscreenElement) {
         document.exitFullscreen();
     }
 }
 
-// 📌 Fonction pour activer/désactiver le plein écran
+// 📌 Toggle fullscreen mode
 function toggleFullscreen() {
     const gameIframe = document.getElementById("game-iframe");
 
     if (!document.fullscreenElement) {
         gameIframe.requestFullscreen().catch(err => {
-            console.error(`Erreur lors de l'activation du plein écran: ${err.message}`);
+            console.error(`Error activating fullscreen: ${err.message}`);
         });
     } else {
         document.exitFullscreen();
     }
 }
 
-// 📌 Fonction pour relancer le jeu
+// 📌 Function to reload game in iframe
 function reloadGame() {
     const gameIframe = document.getElementById("game-iframe");
 
@@ -318,7 +314,7 @@ function reloadGame() {
     }
 }
 
-// 📌 Lier le bouton "Lancer le jeu" avec la popup
+// 📌 Bind launch button with popup
 document.querySelectorAll(".play-game-btn").forEach((btn, index) => {
     btn.addEventListener("click", (event) => {
         event.stopPropagation();

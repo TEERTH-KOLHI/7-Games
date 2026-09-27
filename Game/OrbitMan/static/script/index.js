@@ -505,7 +505,7 @@
 				context.textAlign = 'center';
 				context.textBaseline = 'middle';
 				context.fillStyle = '#FFF';
-				context.fillText('Pac-Man',this.x,this.y);
+				context.fillText('OrbitMan',this.x,this.y);
 			}
 		});
 		stage.createItem({

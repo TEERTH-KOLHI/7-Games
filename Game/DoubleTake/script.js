@@ -35,7 +35,7 @@ function matchCards(img1, img2) {
         updateStats();
         if(matched === 8) {
             if (winBanner) {
-                winBanner.innerText = `✨ Félicitations ! Vous avez gagné en ${moves} coups ! ✨`;
+                winBanner.innerText = `✨ Congratulations! You won in ${moves} moves! ✨`;
                 winBanner.style.display = "block";
             }
         }

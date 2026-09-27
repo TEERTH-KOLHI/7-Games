@@ -1,64 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OmniQuiz - Défi Gamely</title>
+  <title>OmniQuiz - Gamely Challenge</title>
   <link rel="stylesheet" href="style.css">
-  <!-- GSAP pour les animations fluides -->
+  <!-- GSAP for smooth animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
 
-  <!-- 🟢 Écran d'intro avec le logo -->
+  <!-- 🟢 Intro Screen with Logo -->
   <div class="intro-screen">
-    <img src="./quiz-nb.png" alt="Quiz Gamely" class="quiz-logo">
-    <button class="start-btn">⚡ Commencer le Défi</button>
+    <img src="./quiz-nb.png" alt="OmniQuiz Logo" class="quiz-logo">
+    <button class="start-btn">⚡ Start the Challenge</button>
   </div>
 
-  <!-- 🎯 Logo fixe en haut après l'intro -->
+  <!-- 🎯 Fixed Logo Container -->
   <div class="quiz-logo-container hidden">
-    <img src="./quiz-nb.png" alt="Quiz Gamely" class="quiz-logo-fixed">
+    <img src="./quiz-nb.png" alt="OmniQuiz Logo" class="quiz-logo-fixed">
   </div>
 
-  <!-- 🎯 Conteneur du QCM -->
+  <!-- 🎯 Quiz Container -->
   <div class="quiz-container hidden" id="quiz">
     <div class="quiz-header">
       <div class="badge-wrapper"><span class="question-badge" id="question-badge">Question 1 / 5</span></div>
       <h2 id="question">Question text</h2>
       <ul>
-      <!-- Champ texte (en dehors des <ul>) -->
-      <input type="text" id="text-input" class="text-input hidden" placeholder="Votre réponse ici...">
+      <!-- Text Input -->
+      <input type="text" id="text-input" class="text-input hidden" placeholder="Type your answer here...">
 
-      <!-- Boutons vrai/faux (en dehors des <ul>) -->
+      <!-- True/False Buttons -->
       <div class="true-false-container hidden">
         <div id="true-false-options">
-            <button class="true-false-btn" data-value="true">Vrai</button>
-            <button class="true-false-btn" data-value="false">Faux</button>
+            <button class="true-false-btn" data-value="true">True</button>
+            <button class="true-false-btn" data-value="false">False</button>
         </div>
       </div>
 
-      <!-- Conteneur des réponses à choix multiples -->
+      <!-- Multiple Choice Options -->
       <ul id="choices">
           <li class="quiz-option">
               <input type="radio" name="answer" id="a" class="answer">
-              <label for="a" id="a_text">Réponse A</label>
+              <label for="a" id="a_text">Option A</label>
           </li>
           <li class="quiz-option">
               <input type="radio" name="answer" id="b" class="answer">
-              <label for="b" id="b_text">Réponse B</label>
+              <label for="b" id="b_text">Option B</label>
           </li>
           <li class="quiz-option">
               <input type="radio" name="answer" id="c" class="answer">
-              <label for="c" id="c_text">Réponse C</label>
+              <label for="c" id="c_text">Option C</label>
           </li>
           <li class="quiz-option">
               <input type="radio" name="answer" id="d" class="answer">
-              <label for="d" id="d_text">Réponse D</label>
+              <label for="d" id="d_text">Option D</label>
           </li>
       </ul>
     </div>
-    <button id="submit" class="submit-btn">Valider & Suivant →</button>
+    <button id="submit" class="submit-btn">Submit & Next →</button>
   </div>
 
   <script src="script.js"></script>

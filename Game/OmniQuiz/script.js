@@ -1,20 +1,20 @@
 const quizData = [
   {
-      question: "Combien de jeux sont présentés sur Gamely ?",
+      question: "How many games are featured on Gamely?",
       a: "4",
-      b: "6",
-      c: "8",
-      d: "10",
+      b: "7",
+      c: "9",
+      d: "12",
       correct: "b",
       type: "choice"
   },
   {
-      question: "Le site Gamely est-il gratuit ?",
+      question: "Is Gamely completely free to play in your browser?",
       correct: "true",
       type: "true-false"
   },
   {
-      question: "Quel jeu est basé sur la mémoire ?",
+      question: "Which game is based on card memory matching?",
       a: "Telepath",
       b: "DoubleTake",
       c: "HyperDrive 3D",
@@ -23,16 +23,16 @@ const quizData = [
       type: "choice"
   },
   {
-      question: "Quel est le concept de HyperDrive 3D ?",
-      keywords: ["course", "voiture", "vitesse", "pilote", "conduite"],
+      question: "What is the core theme of HyperDrive 3D?",
+      keywords: ["racing", "race", "car", "speed", "driving", "highway", "course", "voiture", "vitesse"],
       type: "text",
-      placeholder: "****** de ******"
+      placeholder: "e.g. racing / speed"
   },
   {
-      question: "Quel est le jeu qui se joue avec un échiquier ?",
+      question: "Which game is played on a chessboard against an intelligent AI?",
       keywords: ["deepknight", "deep knight", "chess", "chessai", "échecs", "echecs"],
       type: "text",
-      placeholder: "*******"
+      placeholder: "e.g. DeepKnight"
   }
 ];
   /**
@@ -101,7 +101,7 @@ const quizData = [
     } else if (currentQuizData.type === "text") {
         textInput.value = "";
         textInput.style.display = "block";
-        textInput.placeholder = currentQuizData.placeholder || "Votre réponse ici...";
+        textInput.placeholder = currentQuizData.placeholder || "Type your answer here...";
     } else if (currentQuizData.type === "true-false") {
         trueFalseOptions.style.display = "block";
     }
@@ -174,12 +174,12 @@ const quizData = [
       <div style="text-align: center; padding: 10px 0;">
         <div style="font-size: 44px; margin-bottom: 12px;">🏆</div>
         <h2 style="text-align: center; color: #c084fc; text-shadow: 0 0 12px rgba(168, 85, 247, 0.6); margin-bottom: 15px;">
-          Quiz Terminé !
+          Challenge Complete!
         </h2>
         <p style="font-size: 18px; color: #f1f5f9; margin-bottom: 25px;">
-          Score final : <strong style="color: #ec4899; font-size: 24px;">${score} / ${quizData.length}</strong> bonnes réponses
+          Final Score: <strong style="color: #ec4899; font-size: 24px;">${score} / ${quizData.length}</strong> correct answers
         </p>
-        <button class="submit-btn" onclick="location.reload()">🔄 Rejouer le Défi</button>
+        <button class="submit-btn" onclick="location.reload()">🔄 Play Again</button>
       </div>
     `;
     gsap.fromTo(quiz, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });

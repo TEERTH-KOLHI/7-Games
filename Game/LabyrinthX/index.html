@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LabyrinthX - Évasion du Dédale</title>
+  <title>LabyrinthX - Maze Escape</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,22 +11,22 @@
 </head>
 <body>
   <header>
-    <img src="LabyQuest-nb.png" alt="LabyQuest Logo" id="logo">
+    <img src="LabyQuest-nb.png" alt="LabyrinthX Logo" id="logo">
   </header>
 
   <div class="game-instruction">
-    <span>🧭 Utilisez les touches <strong>Flèches</strong> ou <strong>ZQSD</strong> pour atteindre la sortie rouge 🏁</span>
+    <span>🧭 Use <strong>Arrow keys</strong> or <strong>WASD</strong> to reach the red exit 🏁</span>
   </div>
   
   <main>
     <div id="maze-container"></div>
     <div id="controls">
       <div class="control-group">
-        <label for="size">📐 Taille :</label>
+        <label for="size">📐 Size:</label>
         <input type="number" id="size" value="21" min="5" max="51" step="2">
       </div>
-      <button id="generate">🎲 Nouveau Labyrinthe</button>
-      <button id="solve">💡 Afficher Solution</button>
+      <button id="generate">🎲 New Maze</button>
+      <button id="solve">💡 Show Solution</button>
     </div>
   </main>
   

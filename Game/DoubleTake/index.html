@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="fr"> 
+<html lang="en"> 
  <head> 
   <meta charset="utf-8"> 
-  <title>DoubleTake - Jeu de Mémoire</title> 
+  <title>DoubleTake - Card Memory Game</title> 
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
  </head> 
  <body> 
   <div class="logo-container">
-    <img src="favicon.png" alt="Memory Card Logo" class="game-logo">
+    <img src="favicon.png" alt="DoubleTake Logo" class="game-logo">
   </div>
   <div class="wrapper"> 
     <div class="stats-bar">
-      <div class="stat-item"><span class="stat-label">Coups :</span> <span id="moves-count" class="stat-val">0</span></div>
-      <div class="stat-item"><span class="stat-label">Paires :</span> <span id="match-count" class="stat-val">0 / 8</span></div>
-      <button id="restart-btn" class="restart-btn" onclick="shuffleCard()">🔄 Rejouer</button>
+      <div class="stat-item"><span class="stat-label">Moves:</span> <span id="moves-count" class="stat-val">0</span></div>
+      <div class="stat-item"><span class="stat-label">Pairs:</span> <span id="match-count" class="stat-val">0 / 8</span></div>
+      <button id="restart-btn" class="restart-btn" onclick="shuffleCard()">🔄 Restart</button>
     </div>
-    <div id="win-banner" class="win-banner">✨ Félicitations ! Toutes les paires trouvées ! ✨</div>
+    <div id="win-banner" class="win-banner">✨ Congratulations! All pairs found! ✨</div>
    <ul class="cards"> 
     <li class="card"> 
      <div class="view front-view"> 
